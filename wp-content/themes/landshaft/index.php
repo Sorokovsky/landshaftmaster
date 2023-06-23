@@ -66,84 +66,39 @@
         <section class="prepare section">
             <div class="inner prepare__inner">
                 <div class="prepare__block">
-                    <div class="prepare__plate">
-                        <div class="prepare__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prepare1.jpg" alt="" class="prepare__img">
-                        </div>
-                        <div class="prepare__desc">
-                            <h2 class="prepare__name">Прибирання органіки</h2>
-                            <p class="prepare__text">З настанням листопада регулярно проводять прибирання органіки з газону. Листовий опад злежується і перегниває, позбавляючи траву сонячного світла і стабільного газообміну. Випріваючи під листям, що гниє, ділянки газону навесні доведеться пересівати. Крім того, проводять підрізування повстяного шару спеціальними граблями.</p>
-                            <h3 class="prepare__ti">Повсть перешкоджає:</h3>
-                            <ul class="prepare__list">
-                                <li class="prepare__item">зростанню кореневої системи;</li>
-                                <li class="prepare__item">провітрюванню трави;</li>
-                                <li class="prepare__item">проникненню вологи й поживних речовин в ґрунт.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="prepare__plate">
-                        <div class="prepare__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prepare2.jpg" alt="" class="prepare__img">
-                        </div>
-                        <div class="prepare__desc">
-                            <h2 class="prepare__name">Аерація</h2>
-                            <p class="prepare__text">У перший рік газонна трава ще не встигає щільно обплести корінням земляний ком. Однак вже з другого року слід проводити аерацію ґрунту.</p>
-                            <h3 class="prepare__ti">Вона необхідна для:</h3>
-                            <ul class="prepare__list">
-                                <li class="prepare__item">дренування ґрунту, відведення вологи від прикореневої зони в найглибші шари;</li>
-                                <li class="prepare__item">поліпшення газообміну, надходження кисню до коренів.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="prepare__plate">
-                        <div class="prepare__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prepare3.jpeg" alt="" class="prepare__img">
-                        </div>
-                        <div class="prepare__desc">
-                            <h2 class="prepare__name">Підживлення</h2>
-                            <p class="prepare__text">До настання холодів газонну траву обов'язково підгодовують фосфорно-калійними складами. Важливо виключити внесення азоту — він стимулює повторний ріст рослин, знижує їх зимостійкість. Калій значно підвищує морозостійкість трави, її стійкість до коливань температури й вологості. Газон менш схильний до захворювань. Фосфор зміцнює кореневу систему, готує її до зимівлі.</p>
-                            <h3 class="prepare__ti">Секрети правильної підгодівлі газону:</h3>
-                            <ol class="prepare__list">
-                                <li class="prepare__item">Добрива вносять тільки на добре зволожений ґрунт.</li>
-                                <li class="prepare__item">Після підгодівлі газонну траву необхідно ретельно полити.</li>
-                                <li class="prepare__item">Не слід розсипати підгодівлі під час тривалих посух.</li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="prepare__plate">
-                        <div class="prepare__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prepare4.jpg" alt="" class="prepare__img">
-                        </div>
-                        <div class="prepare__desc">
-                            <h2 class="prepare__name">Досів</h2>
-                            <p class="prepare__text">Якщо в літній період були допущені помилки в догляді, то на газоні можуть утворитися лисини. «Підлікувати» його найкраще восени. Завдяки великій кількості опадів і помірній температурі повітря, створюються сприятливі умови для швидкого проростання й активної вегетації трави.</p>
-                            <p class="prepare__text">Для підсіву рекомендується використовувати ту ж травосуміш. Вона буде деякий час відставати в рості від основного газону, однак утворює однорідний травостій. При використанні регенераційно-відновлювальної суміші травостій може злегка відрізнятися по відтінку і швидкості росту. Однак така трава швидко затягує лисини. Досів здійснюють не менше ніж за 1-1,5 місяці до настання морозів. За цей час трава встигає надійно вкоренитися і набратися сил для майбутньої зимівлі.</p>
-                        </div>
-                    </div>
-                    <div class="prepare__plate">
-                        <div class="prepare__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/prepare5.jpeg" alt="" class="prepare__img">
-                        </div>
-                        <div class="prepare__desc">
-                            <h2 class="prepare__name">Мульчування</h2>
-                            <p class="prepare__text">Для регіонів з малосніжними зимами рекомендовано передзимове мульчування газону.</p>
-                            <h3 class="prepare__ti">Як мульчу використовують:</h3>
-                            <ul class="prepare__list">
-                                <li class="prepare__item">суміш торфу і піску — для глинистих ґрунтів;</li>
-                                <li class="prepare__item">псуміш торфу і родючої землі — для піщаного ґрунту.</li>
-                            </ul>
-                            <p class="prepare__text">Ділянку покривають підхожою сумішшю шаром у 2-3 см.</p>
-                            <h3 class="prepare__ti">Мульчування дозволяє:</h3>
-                            <ul class="prepare__list">
-                                <li class="prepare__item">вирівняти нерівності, що утворилися за сезон;</li>
-                                <li class="prepare__item">зменшити випаровування вологи;</li>
-                                <li class="prepare__item">захистити рослини від морозів;</li>
-                                <li class="prepare__item">підвищити поживність ґрунту;</li>
-                                <li class="prepare__item">підвищити стійкість трави до несприятливих умов.</li>
-                            </ul>
-                        </div>
+                <?php
+                    $winter_carts = CFS()->get('winter_cart');
+                    foreach($winter_carts as $winter_cart){?>
+                <div class="prepare__plate">
+                <div class="prepare__image">
+                    <img src="<?php echo $winter_cart['winter_image']; ?>" alt="" class="prepare__img">
+                </div>
+                    <div class="prepare__desc">
+                        <h2 class="prepare__name"><?php echo $winter_cart['winter_cart_name'] ?></h2>
+                        <?php
+                        $winter_texts = $winter_cart['winter_cart_desc'];
+                        foreach($winter_texts as $winter_text){?>
+                             <p class="prepare__text"><?php echo $winter_text['winter_cart_text']; ?></p>
+                    <?php }?>
+                    <?php
+                        if(key_exists('winter_lists', $winter_cart)){
+                        $winter_lists = $winter_cart['winter_lists'];
+                        foreach($winter_lists as $winter_list){?>
+                             <h3 class="prepare__ti"><?php echo $winter_list['winter_name']; ?></h3>
+                             <ul class="prepare__list">
+                             <?php
+                                if(isset($winter_lists)){
+                                $winter_items = $winter_list['winter_items'];
+                                foreach($winter_items as $winter_item){?>
+                                <li class="prepare__item"><?php echo $winter_item['winter_item']; ?></li>
+                            <?php }}?>
+                        </ul>
+                    <?php }}?>
                     </div>
                     </div>
+                    <?php }?>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section poluv" id="work">
