@@ -44,26 +44,27 @@
             </div>
         </section>
         <section class="ground section">
-            <h2 class="title ground__title">Укріплення схилів георешіткою</h2>
+            <h2 class="title ground__title"><?php echo CFS()->get('ground_title'); ?></h2>
                 <div class="swiper ground-container">
                     <div class="swiper-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ground/ground1.jpg" alt="" class="swiper-slide ground-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ground/ground3.jpg" alt="" class="swiper-slide ground-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ground/ground4.jpg" alt="" class="swiper-slide ground-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ground/ground2.jpg" alt="" class="swiper-slide ground-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ground/ground5.jpg" alt="" class="swiper-slide ground-slide">
+                    <?php
+                        $ground_images = CFS()->get('ground_images');
+                        foreach($ground_images as $ground_image){?>
+                            <img src="<?php echo $ground_image['ground_image']; ?>" alt="" class="swiper-slide ground-slide">
+                    <?php }?>
                     </div>
                     <div class="swiper-pagination ground-pagination"></div>
                     <div class="swiper-button-prev ground-button-prev"></div>
                     <div class="swiper-button-next ground-button-prev"></div>
                   </div>
-                   <h2 class="first-title title"> Озеленення та благоустрій.</h2>
-                   <h2 class="first-title title"> Комплексне обслуговування.</h2>
-                   <h2 class="first-title title"> Догляд за кімнатними рослинами.</h2>
+                  <?php
+                        $winter_titles = CFS()->get('winter_titles');
+                        foreach($winter_titles as $winter_title){?>
+                            <h2 class="first-title title"><?php echo $winter_title['winter_title']; ?></h2>
+                    <?php }?>
         </section>
         <section class="prepare section">
             <div class="inner prepare__inner">
-                <h2 class="title prepare__title">Підготовка газону до зими</h2>
                 <div class="prepare__block">
                     <div class="prepare__plate">
                         <div class="prepare__image">
