@@ -104,22 +104,15 @@
         <section class="section poluv" id="work">
             <div class="swiper work-container">
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poluv8.jpg" alt="" class="swiper-slide work-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poluv9.jpg" alt="" class="swiper-slide work-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poluv.jpg" alt="" class="swiper-slide work-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poluv2.jpg" alt="" class="swiper-slide work-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poluv3.jpg" alt="" class="swiper-slide work-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/poluv6.jpg" alt="" class="swiper-slide work-slide">
+                    <?php
+                     $poluv_slides = CFS()->get('poluv_slider');
+                     foreach($poluv_slides as $poluv_slide){?>
+                        <img src="<?php echo $poluv_slide['poluv_image']; ?>" alt="" class="swiper-slide work-slide">
+                    <?php }?>
                 </div>
-                <!-- If we need pagination -->
                 <div class="swiper-pagination work-pagination"></div>
-
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev work-button-prev"></div>
                 <div class="swiper-button-next work-button-next" ></div>
-
-                <!-- If we need scrollbar -->
               </div>
               <div class="poluv_inner inner">
                   <ul class="poluv_list">
