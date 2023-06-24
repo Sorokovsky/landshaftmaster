@@ -74,7 +74,7 @@
                     <img src="<?php echo $winter_cart['winter_image']; ?>" alt="" class="prepare__img">
                 </div>
                     <div class="prepare__desc">
-                        <h2 class="prepare__name"><?php echo $winter_cart['winter_cart_name'] ?></h2>
+                        <h2 class="prepare__name"><?php echo $winter_cart['winter_cart_name']; ?></h2>
                         <?php
                         $winter_texts = $winter_cart['winter_cart_desc'];
                         foreach($winter_texts as $winter_text){?>
@@ -155,39 +155,20 @@
                 <div class="swiper-button-next gallery-button-next"></div>
               </div>
         </section>
-        <section class="section video">
+        <?php
+        $video_items = CFS()->get('video_items');
+        foreach($video_items as $video_item){?>
+            <section class="section video">
             <div class="inner video_inner">
+                <?php if($video_item['video_name'] !== ''){?>
+                    <p class="title"><?php echo $video_item['video_name']; ?></p>
+                <?php } ?>
                 <video class="vid" controls width="250">
-                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/video3.mp4"
+                    <source src="<?php echo $video_item['video_file']; ?>"
                             type="video/mp4">
-
-                    Sorry, your browser doesn't support embedded videos.
                 </video>
 
             </div>
         </section>
-        <section class="section video">
-            <div class="inner video_inner">
-                <p class="title">Скарифікація і аерація газону</p>
-                <video class="vid" controls width="250">
-                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/video.mp4"
-                            type="video/mp4">
-
-                    Sorry, your browser doesn't support embedded videos.
-                </video>
-
-            </div>
-        </section>
-        <section class="section video">
-            <div class="inner video_inner">
-                <p class="title">Декоративна обрізка самшиту</p>
-                <video class="vid" controls width="250">
-                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/video2.mp4"
-                            type="video/mp4">
-
-                    Sorry, your browser doesn't support embedded videos.
-                </video>
-
-            </div>
-        </section>
+        <?php }?>
 <?php get_footer(); ?>
