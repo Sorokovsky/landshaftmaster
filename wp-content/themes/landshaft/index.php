@@ -143,47 +143,14 @@
         </section>
         <section style='margin-top: 30px;' class="gallery section" id="gallery">
             <div class="swiper gallery-container">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper gallery-wrapper">
-                  <!-- Slides -->
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider45.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider46.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider47.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider48.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider49.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider46.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider47.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider48.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider49.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide33.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide34.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide35.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide36.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide37.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide38.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide39.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide40.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide41.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide42.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide43.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide1.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide2.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide3.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide4.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide5.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide6.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide7.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide8.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide9.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide10.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide11.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide12.jpg" alt="" class="swiper-slide gallery-slide">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slide13.jpg" alt="" class="swiper-slide gallery-slide">
+                <?php
+                     $gallery_slider = CFS()->get('gallery_slider');
+                     foreach($gallery_slider as $gallery_slide){?>
+                        <img src="<?php echo $gallery_slide['gallery_image']; ?>" alt="" class="swiper-slide gallery-slide">
+                    <?php }?>
                 </div>
-                <!-- If we need pagination -->
                 <div class="gallery-pagination swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev gallery-button-prev"></div>
                 <div class="swiper-button-next gallery-button-next"></div>
               </div>
