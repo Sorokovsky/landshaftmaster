@@ -116,12 +116,11 @@
               </div>
               <div class="poluv_inner inner">
                   <ul class="poluv_list">
-                      <li class="poluv_text text">Ландшафтне проектування</li>
-                      <li class="poluv_text text">Створення газонів</li>
-                      <li class="poluv_text text">Декоративні водойми</li>
-                      <li class="poluv_text text">Системи поливу</li>
-                      <li class="poluv_text text">Альпінарії, квітники, рокарії</li>
-                      <li class="poluv_text text">Обслуговування</li>
+                  <?php
+                     $poluv_works = CFS()->get('poluv_works');
+                     foreach($poluv_works as $poluv_work){?>
+                        <li class="poluv_text text"><?php echo $poluv_work['poluv_work']; ?></li>
+                    <?php }?>
                   </ul>
               </div>
         </section>
