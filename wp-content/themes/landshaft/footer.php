@@ -2,7 +2,7 @@
     <footer class="section contacts" id="contacts">
         <div class="contacts_inner inner">
             <div class="contacts_avatar">
-                <img src="img/avatar.jpg" alt="" class="contacts_img">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/avatar.jpg" alt="" class="contacts_img">
             </div>
             <div class="contacts_description">
                 <div class="contacts_social">

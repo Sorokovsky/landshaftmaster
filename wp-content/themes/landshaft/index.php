@@ -127,16 +127,16 @@
         <section class="section work">
             <div class="inner work_inner">
                 <div class="work_image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work.jpg" alt="" class="work_img">
+                    <img src="<?php echo CFS()->get('flowers_images'); ?>" alt="" class="work_img">
                 </div>
                 <div class="work_description">
-                    <p class="work_title title">Послуги з догляду за кімнатними рослинами</p>
+                    <p class="work_title title"><?php echo CFS()->get('flowers_titles'); ?></p>
                     <ul class="work_list">
-                        <li class="work_text text">Абонентське обслуговування та комплексний догляд за кімнатними рослинами</li>
-                        <li class="work_text text">Обрізка та формування крони кімнатних рослин</li>
-                        <li class="work_text text">Пересадка та підживлювання</li>
-                        <li class="work_text text">Діагностика та лікування кімнатних рослин</li>
-                        <li class="work_text text">Консультація спеціаліста</li>
+                    <?php
+                     $flowers_items = CFS()->get('flowers_items');
+                     foreach($flowers_items as $flowers_item){?>
+                        <li class="work_text text"><?php echo $flowers_item['flowers_item']; ?></li>
+                    <?php }?>
                     </ul>
                 </div>
             </div>
