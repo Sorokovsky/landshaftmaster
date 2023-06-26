@@ -31,7 +31,7 @@
             <a href="<?php echo $menu_item['href']; ?>" class="mobile_link"><?php echo $menu_item['text']; ?></a>
         <?php }?>
         </nav>
-        <a href="tel:0982525857" class="contact">
+        <a href="tel:<?php echo str_replace(" ", "", CFS()->get('phones')[0]['phone']); ?>" class="contact">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tel.svg" alt="" class="contact_img">
         </a>
     </header>
