@@ -3,10 +3,10 @@
 <head>
     <meta charset="<?php echo bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="квіти, рослини, landshaft, master, Хмельницький,догляд, пересадка, рослин, фахівця, кімнатні">
-    <meta name="description" content="Наша компанія пропонує вам такі послуги:Ландшафтне проектування, створення газонів, декоративні водойми, системи поливу, альпінарії, квітники, рокарії, обслуговування">
+    <meta name="keywords" content="<?php echo CFS()->get('keywords'); ?>">
+    <meta name="description" content="<?php echo CFS()->get('desc'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="img/intro.jpg" />
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/intro.jpg" />
     <?php wp_head(); ?>
 </head>
 <body>
