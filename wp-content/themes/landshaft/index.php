@@ -30,7 +30,7 @@
                         <img src="<?php echo CFS()->get('spring_image'); ?>" class="spring__img">
                     </div>
                     <div class="spring__desc">
-                        <p class="spring__text"><?php echo CFS()->get('spring_desc'); ?>
+                        <p class="spring__text"><?php echo CFS()->get(field_name: 'spring_desc'); ?>
                             <br/><strong style="margin: 20px 0; display: inline-block;"><?php echo CFS()->get('spring_title'); ?></strong></p>
                             <ul class="spring__list">
                             <?php
@@ -127,7 +127,29 @@
         <section class="section work">
             <div class="inner work_inner">
                 <div class="work_image">
-                    <img src="<?php echo CFS()->get('flowers_images'); ?>" alt="" class="work_img">
+                    <div class="swiper gallery-container">
+                <div class="swiper-wrapper gallery-wrapper">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/1.jpg" alt="" 
+                        class="swiper-slide gallery-slide">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/2.jpg" alt=""
+                        class="swiper-slide gallery-slide">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/3.jpg" alt=""
+                         class="swiper-slide gallery-slide">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/4.jpg" alt=""
+                        class="swiper-slide gallery-slide">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/5.jpg" alt=""
+                        class="swiper-slide gallery-slide">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/6.jpg" alt=""
+                        class="swiper-slide gallery-slide">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/7.jpg" alt=""
+                        class="swiper-slide gallery-slide">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/responds/8.jpg" alt=""
+                        class="swiper-slide gallery-slide">
+                </div>
+                <div class="gallery-pagination swiper-pagination"></div>
+                <div class="swiper-button-prev gallery-button-prev"></div>
+                <div class="swiper-button-next gallery-button-next"></div>
+                    </div>
                 </div>
                 <div class="work_description">
                     <p class="work_title title"><?php echo CFS()->get('flowers_titles'); ?></p>
@@ -156,7 +178,7 @@
               </div>
         </section>
         <?php
-        $video_items = CFS()->get('video_items');
+        $video_items = CFS()->get(field_name: 'video_items');
         foreach($video_items as $video_item){?>
             <section class="section video">
             <div class="inner video_inner">
@@ -164,10 +186,8 @@
                     <p class="title"><?php echo $video_item['video_name']; ?></p>
                 <?php } ?>
                 <video class="vid" controls width="250">
-                    <source src="<?php echo $video_item['video_file']; ?>"
-                            type="video/mp4">
+                    <source src="<?php echo $video_item['video_file']; ?>" type="video/mp4">
                 </video>
-
             </div>
         </section>
         <?php }?>

@@ -1,4 +1,5 @@
 <?php
+define( 'WP_CACHE', true );
 /**
  * The base configuration for WordPress
  *
@@ -20,16 +21,16 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'landshaft' );
+define( 'DB_NAME', "landmaster" );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', "mysql" );
 
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', "mysql" );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', "localhost" );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -85,11 +86,12 @@ define( 'WP_DEBUG', false );
 
 
 
+define( 'WP_SITEURL', 'http://landshaftmaster/' );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+	define( 'ABSPATH', dirname(__FILE__) . '/' );
 }
 
 /** Sets up WordPress vars and included files. */

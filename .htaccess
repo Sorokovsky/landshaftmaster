@@ -1,7 +1,8 @@
-
+# This file was updated by Duplicator on 2024-11-08 11:21:01.
+# See the original_files_ folder for the original source_site_htaccess file.
 # BEGIN WordPress
-# Директиви (рядки) між `BEGIN WordPress` і `END WordPress`
-# створені автоматично і підлягають змінам тільки через фільтри WordPress.
-# Зміни зроблені вручну між цими маркерами будуть перезаписані.
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
 
 # END WordPress
