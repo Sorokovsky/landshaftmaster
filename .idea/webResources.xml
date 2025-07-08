@@ -6,6 +6,7 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/.srv/wordpress" />
+            <path value="file://$PROJECT_DIR$/.srv/wordpress/wp-content/plugins/elementor" />
           </resourceRoots>
         </entryData>
       </entry>
