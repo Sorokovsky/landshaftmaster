@@ -13,14 +13,14 @@ function get_plugin_text_domain(): string
     return 'landshaft-widgets';
 }
 
-function import_widget(string $file): void
+function import_widgets(): void
 {
-    require_once __DIR__.DIRECTORY_SEPARATOR."widgets".DIRECTORY_SEPARATOR.$file.".php";
+    require_once __DIR__.DIRECTORY_SEPARATOR."widgets".DIRECTORY_SEPARATOR."index.php";
 }
 
 function register_widgets(Widgets_Manager $widgets_manager): void
 {
-    import_widget("LanshaftSliderWidget");
+    import_widgets();
     $widgets_manager->register(new Lanshaft_Slider_Widget());
 }
 
