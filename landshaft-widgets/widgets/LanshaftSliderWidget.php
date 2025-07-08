@@ -7,7 +7,7 @@ class Lanshaft_Slider_Widget extends Widget_Base {
         return 'custom_alert_widget';
     }
     public function get_title(): string {
-        return get_translated_string('Custom Alert Widget');
+        return get_plugin_translated_string('Custom Alert Widget');
     }
     public function get_icon(): string {
         return 'eicon-alert';
@@ -19,7 +19,7 @@ class Lanshaft_Slider_Widget extends Widget_Base {
         $this->start_controls_section(
             'section_content',
             [
-                'label' => get_translated_string('Content'),
+                'label' => get_plugin_translated_string('Content'),
             ]
         );
 

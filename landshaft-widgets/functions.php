@@ -1,10 +1,10 @@
 <?php
-function get_translated_string($string): string
+function get_plugin_translated_string($string): string
 {
-    return __($string, get_text_domain());
+    return __($string, get_plugin_text_domain());
 }
 
-function get_text_domain(): string
+function get_plugin_text_domain(): string
 {
     return 'landshaft-widgets';
 }
