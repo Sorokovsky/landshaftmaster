@@ -1,0 +1,47 @@
+version: '3.9'
+services:
+  database:
+    image: mysql:latest
+    container_name: database
+    restart: always
+    ports:
+      - "3307:3306"
+    volumes:
+      - "./.srv/database:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  wordpress:
+    image: wordpress:latest
+    depends_on:
+      - database
+    links:
+      - database
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: database:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
+    volumes:
+      - "./.srv/wordpress:/var/www/html"
+      - "./theme:/var/www/html/wp-content/themes/my-theme/"
+      - "./plugin:/var/www/html/wp-content/plugins/my-plugin/"
+      - "./.srv/custom.ini:/usr/local/etc/php/conf.d/custom.ini"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    depends_on:
+      - database
+    links:
+      - database
+    ports:
+      - "8181:80"
+    environment:
+      MYSQL_USERNAME: wordpress
+      MYSQL_ROOT_PASSWORD: wordpress
+      PMA_HOST: database
