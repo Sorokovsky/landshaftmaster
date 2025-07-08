@@ -2,30 +2,24 @@
 
 use Elementor\Widget_Base;
 
+if (!defined('ABSPATH')) exit;
+
 class Lanshaft_Slider_Widget extends Widget_Base {
     public function get_name(): string {
-        return 'custom_alert_widget';
+        return 'landshaft-slider';
     }
     public function get_title(): string {
-        return get_plugin_translated_string('Custom Alert Widget');
+        return get_plugin_translated_string('Slider');
     }
     public function get_icon(): string {
-        return 'eicon-alert';
+        return 'eicon-slides';
     }
     public function get_categories(): array {
-        return [ 'Landshaft' ];
+        return ["landshaft"];
     }
     protected function register_controls(): void {
-        $this->start_controls_section(
-            'section_content',
-            [
-                'label' => get_plugin_translated_string('Content'),
-            ]
-        );
-
-        $this->end_controls_section();
     }
     protected function render(): void {
-
+        echo "hello";
     }
 }
