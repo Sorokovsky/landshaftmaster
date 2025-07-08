@@ -26,11 +26,15 @@ function register_widgets(Widgets_Manager $widgets_manager): void
 
 function register_widgets_category(Elements_Manager $elements_manager): void
 {
-    $elements_manager->add_category(
-        "landshaft",
-        [
-            "title" => esc_html__("Landshaft", get_plugin_text_domain()),
+    $categories = [];
+    $categories["landshaft"] = [
+            "title" => get_plugin_translated_string("Landshaft"),
             "icon" => "eicon-library-download",
-        ]
-    );
+    ];
+    $old_categories = $elements_manager->get_categories();
+    $categories = array_merge($categories, $old_categories);
+    $set_categories = function(array $categories) {
+        $this->categories = $categories;
+    };
+    $set_categories->call($elements_manager, $categories);
 }
