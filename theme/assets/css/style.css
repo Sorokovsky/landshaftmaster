@@ -17,7 +17,7 @@ img {
 
 .container {
   max-width: 1200px;
-  padding: 15px 10px;
+  padding: 15px 20px;
   margin: 0 auto;
 }
 
@@ -25,6 +25,7 @@ header {
   width: 100%;
   background-color: #e5e5e5;
   position: sticky;
+  z-index: 9999;
   top: 0;
   left: 0;
 }
@@ -66,4 +67,54 @@ header {
 .header__nav > ul > li > a {
   text-decoration: none;
   color: inherit;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 24px;
+}
+
+.burger::before, .burger::after, .burger > span {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: .3s transform ease;
+  transform-origin: center;
+}
+
+.burger > span {
+  top: 10px;
+}
+
+.burger::after {
+  top: 22px;
+}
+
+.burger.active::before {
+  transform: rotate(45deg) translate(5px, 13px);
+}
+
+.burger.active > span {
+  transform: scale(0);
+}
+
+.burger.active::after {
+  transform: rotate(-45deg) translate(0px, -11px);
+}
+
+@media screen and (max-width: 860px) {
+  .header__nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
 }

@@ -47,7 +47,7 @@ function get_translated_text(string $text): string
     return __($text, get_text_domain());
 }
 
-function get_header_menu(): mixed
+function get_header_menu(): string|null|false
 {
     return wp_nav_menu(
         [
@@ -57,4 +57,9 @@ function get_header_menu(): mixed
             "menu_class" => "header__menu",
         ]
     );
+}
+
+function get_mobile_menu(): string|null|false
+{
+    return wp_nav_menu();
 }

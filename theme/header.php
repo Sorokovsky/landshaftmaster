@@ -14,6 +14,9 @@
         <div class="container header__container">
             <?php echo get_custom_logo(); ?>
             <?php echo get_header_menu(); ?>
+            <div class="burger">
+                <span></span>
+            </div>
         </div>
     </header>
 <main class="main">
