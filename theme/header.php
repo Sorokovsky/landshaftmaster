@@ -19,4 +19,9 @@
             </div>
         </div>
     </header>
+    <section class="mobile">
+        <div class="container mobile__container">
+            <?php echo get_header_menu(); ?>
+        </div>
+    </section>
 <main class="main">

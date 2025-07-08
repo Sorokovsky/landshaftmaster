@@ -58,8 +58,3 @@ function get_header_menu(): string|null|false
         ]
     );
 }
-
-function get_mobile_menu(): string|null|false
-{
-    return wp_nav_menu();
-}
